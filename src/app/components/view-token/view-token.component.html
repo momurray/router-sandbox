@@ -1,0 +1,18 @@
+<p>
+    view-token works!
+</p>
+
+<div style="width:100%;word-break: break-all;">
+    <table>
+        <thead>
+            <th style="width:150px;text-align:center">Field</th>
+            <th width="80%">Value</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of props">
+                <td style="text-align:center"><strong>{{ p.name }}</strong></td>
+                <td>{{ p.value }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+<p>
+    dashboard works!
+</p>
+<button (click)="getMembers()" [disabled]="showSpinner">Get All Members</button>
+<button (click)="getAllMemberships()" [disabled]="showSpinner">Get All Memberships</button>
+<hr>
+<div *ngIf="!showSpinner">
+    {{ data }}
+</div>
+<div *ngIf="showSpinner">
+    <img height="50px" src="../../../assets/spinner.svg" />
+</div>
