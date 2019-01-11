@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OktaService } from 'src/app/shared/services/okta.service';
+import { ObjectProperties } from 'src/app/shared/models/properties.model';
 
 @Component({
     selector: 'app-view-token',
@@ -9,7 +10,7 @@ import { OktaService } from 'src/app/shared/services/okta.service';
 export class ViewTokenComponent implements OnInit {
 
 
-    props:Array<props>=[]
+    props:Array<ObjectProperties>=[]
 
     constructor(private oktaService: OktaService) { }
 
@@ -22,7 +23,3 @@ export class ViewTokenComponent implements OnInit {
 
 }
 
-class props{
-    public name;
-    public value;
-}

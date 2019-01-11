@@ -5,6 +5,7 @@ import { UnprotectedComponent } from './components/unprotected/unprotected.compo
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { ViewTokenComponent } from './components/view-token/view-token.component';
+import { SendMailComponent } from './components/send-mail/send-mail.component';
 
 const routes: Routes = [
     {
@@ -18,6 +19,9 @@ const routes: Routes = [
     },
     {
         path: 'viewtoken', component: ViewTokenComponent
+    },
+    {
+        path: 'sendmail', component: SendMailComponent
     },
     {
         path: '', pathMatch: 'full', redirectTo: 'dashboard'

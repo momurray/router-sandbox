@@ -1,0 +1,27 @@
+<p>
+    send mail works!
+</p>
+<button type="button" (click)="getStatistics()">Get Stats</button>
+<button type="button" (click)="invalidEmails()">Invalid emails</button>
+<button type="button" (click)="bouncedEmails()">Bounced emails</button>
+<button type="button" (click)="sendEmail()">Send single email</button>
+<button type="button" (click)="sendEmailToMany()">Send email to Many</button>
+
+<hr>
+{{message}}
+<div *ngIf="props.length > 0">
+    <div style="width:100%;word-break: break-all;">
+        <table>
+            <thead>
+                <th style="width:150px;text-align:center">Field</th>
+                <th style="text-align:left;">Value</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of props">
+                    <td style="text-align:center"><strong>{{ p.name }}</strong></td>
+                    <td style="text-align: left">{{ p.value }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

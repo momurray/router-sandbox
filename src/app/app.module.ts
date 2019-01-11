@@ -13,6 +13,7 @@ import { OktaService } from './shared/services/okta.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderInterceptor } from './shared/interceptors/header-interceptor';
 import { ViewTokenComponent } from './components/view-token/view-token.component';
+import { SendMailComponent } from './components/send-mail/send-mail.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { ViewTokenComponent } from './components/view-token/view-token.component
         UnprotectedComponent,
         DashboardComponent,
         RouterOutletComponent,
-        ViewTokenComponent
+        ViewTokenComponent,
+        SendMailComponent
     ],
     imports: [
         BrowserModule,
