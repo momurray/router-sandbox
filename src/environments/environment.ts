@@ -3,7 +3,24 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    okta: {
+        baseUrl: 'https://dev-288917.oktapreview.com',
+        clientId: '0oag6vxqecoBf267O0h7',
+        redirectUri: 'http://localhost:4200',
+        authParams: {
+            issuer: 'default',
+            responseType: ['id_token', 'token'],
+            display: 'page'
+        },
+        logo: '../../../assets/logo-rms.png',
+        language: 'en',
+        i18n: {
+            en: {
+                'primaryauth.title': 'Sign in to MOM World'
+            }
+        },
+    }
 };
 
 /*

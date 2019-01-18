@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import OktaSignIn from '@okta/okta-signin-widget';
 import { UserService } from './user.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -11,24 +12,8 @@ export class OktaService {
 
     constructor(private userService: UserService) {
 
-        this.signIn = new OktaSignIn({
-            baseUrl: 'https://dev-288917.oktapreview.com',
-            clientId: '0oag6vxqecoBf267O0h7',
-            redirectUri: 'http://localhost:4200',
-            authParams: {
-                issuer: 'default',
-                responseType: ['id_token', 'token'],
-                display: 'page'
-            },
-            logo: '../../../assets/logo-rms.png',
-            language: 'en',
-            i18n: {
-                en: {
-                    'primaryauth.title': 'Sign in to MOM RMS'
-                }
-            },
-        });
-
+        // Create my basic okta object. 
+        this.signIn = new OktaSignIn(environment.okta);
     }
 
     checkOktaStatus() {

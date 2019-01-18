@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { OktaService } from 'src/app/shared/services/okta.service';
+import { Observable, Observer } from 'rxjs';
 
 @Component({
     selector: 'app-dashboard',
@@ -12,9 +13,13 @@ export class DashboardComponent implements OnInit {
     apiUrl: string;
     data: string = "";
     showSpinner: boolean = false;
-
+    time$;
     constructor(private http: HttpClient, private cdRef: ChangeDetectorRef, private oktaService: OktaService) {
         this.apiUrl = "https://oktatest.oqlist.co.uk"
+
+        this.time$ = new Observable<string>((observer: Observer<string>) => {
+            setInterval(() => observer.next(new Date().toString()), 1000);
+        });
     }
 
     ngOnInit() {

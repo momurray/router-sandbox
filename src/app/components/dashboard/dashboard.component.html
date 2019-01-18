@@ -4,9 +4,8 @@
 <button (click)="getMembers()" [disabled]="showSpinner">Get All Members</button>
 <button (click)="getAllMemberships()" [disabled]="showSpinner">Get All Memberships</button>
 <hr>
-<div *ngIf="!showSpinner">
-    {{ data }}
-</div>
+Time now: {{ time$ | async | date : 'dd MMM yyyy HH:mm:ss' }}
+{{ data }}
 <div *ngIf="showSpinner">
     <img height="50px" src="../../../assets/spinner.svg" />
 </div>
