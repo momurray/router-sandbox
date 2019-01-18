@@ -1,6 +1,14 @@
 # Sb7
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+Using Okta login, dynmaically load a router-outlet after successful login. This is to cater for situations where the router outlet is deeply embedded in the basic appilcation rather than at the very top level of the application. With Okta this is a problem as it's standard redirect mechanism expects the router to be active to support their callback login mechanism. 
+
+Specifically this example uses the following:
+    okta integration (with callback)
+    dynamic instantiation of the router-outlet
+    http interceptors
+    http client api calls
+    
+ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
 ## Development server
 
